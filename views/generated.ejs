@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassMeNot - Link Generated</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-center h-screen bg-gray-100">
+    <h1 class="text-2xl font-bold mb-4">Share This Secure Link</h1>
+    <input type="text" value="<%= link %>" readonly class="border p-2 w-3/4 mb-4">
+    <button onclick="navigator.clipboard.writeText('<%= link %>')" class="bg-green-500 text-white px-4 py-2 rounded">
+        Copy to Clipboard
+    </button>
+</body>
+</html>
