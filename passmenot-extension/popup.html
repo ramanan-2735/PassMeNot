@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassMeNot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            text-align: center;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>PassMeNot</h2>
+    <p>Securely auto-login without revealing passwords.</p>
+    <button id="testButton">Test Auto-Login</button>
+    
+    <script>
+        document.getElementById("testButton").addEventListener("click", () => {
+            chrome.runtime.sendMessage({ action: "testLogin" });
+        });
+    </script>
+</body>
+</html>
+
+
+<!-- ### **📌 How to Install and Run the Browser Extension**  
+
+Since this is a **custom extension**, you'll need to manually install it in **Chrome** or **Firefox**.  
+
+---
+
+## **📂 Step 1: Create Extension Files**
+1. **Create a new folder** on your computer.  
+   Example: `passmenot-extension`  
+2. Inside this folder, create these files:  
+   - `manifest.json` → *(Already provided above, copy & paste it here)*  
+   - `background.js` → *(Will generate next, handles login links)*  
+   - `content.js` → *(Will generate next, auto-fills login form)*  
+   - `popup.html` → *(Optional: UI for settings, will provide if needed)*  
+
+---
+
+## **🌍 Step 2: Load Extension in Chrome**
+1. Open **Chrome** and go to:  
+   `chrome://extensions/`  
+2. Enable **Developer Mode** (top right corner).  
+3. Click **"Load Unpacked"** and select your `passmenot-extension` folder.  
+4. The extension will be installed and visible in the Chrome toolbar! 🎉  
+
+---
+
+## **🦊 Step 3: Load Extension in Firefox**
+1. Open **Firefox** and go to:  
+   `about:debugging#/runtime/this-firefox`  
+2. Click **"Load Temporary Add-on"**.  
+3. Select the `manifest.json` file inside your `passmenot-extension` folder.  
+4. The extension will be installed in Firefox! 🎉  
+
+---
+
+### **🔹 Next Steps**
+I'll now generate:  
+✅ **Background Script (`background.js`)** – Detects secure login links.  
+✅ **Content Script (`content.js`)** – Auto-fills login fields.  
+
+🚀 Generating now! -->
